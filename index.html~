@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>To-do list</title>
+</head>
+<body>
+  <h1>Main heading in my document</h1>
+  <!-- Note that it is "h" + "1", not "h" + the letters "one" -->
+  <p>Look Ma, I am coding <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+  <p>
+    <ul>
+      <li>register for CCSC conference, due 9/23</li>
+      <li>prepare for CCSC conference, due 10/10</li>
+      <li>submit to SIGCSE conference, due 10/27</li>
+      <li>enjoy CS298</li>
+      <li>grade CS107</li>
+      <li>grade CS393</li>
+    </ul>
+  </p>
+</body>
+</html>
