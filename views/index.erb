@@ -4,8 +4,12 @@
 <p>You can see an example of using a loop in an ERB file at <a href="/99bottles">/99bottles</a></p>
 
 <ul>
-<% @tasks.each do |line| %>
-<li class="background-purple"><%= line %></li>
+<% @tasks.each do |task, date| %>
+   <li><%= task %>
+   <!--% unless date.nil? || date=="" %-->
+      <span class="background-purple"> due on <%= date %></span>
+   <!--% end %-->
+   </li>
 <% end %>
 </ul>
 

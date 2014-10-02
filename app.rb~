@@ -9,8 +9,17 @@ Bundler.require
 
 # define a route for the root of the site
 get '/' do
+    @tasks= File.read('todo.txt').split("\n")
+
   # render the views/index.erb template
 	erb :index
+end
+
+post '/' do
+  File.open("todo.txt", "a") do |file|
+    file.puts "#{params[:task]} - #{params[:date]}"
+  end
+  redirect '/'
 end
 
 # define another route with some content that's then shown by the view

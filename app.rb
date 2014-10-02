@@ -9,8 +9,11 @@ Bundler.require
 
 # define a route for the root of the site
 get '/' do
-    @tasks= File.read('todo.txt').split("\n")
-
+    @tasks= []
+    lines=File.read('todo.txt').split("\n")
+    lines.each do |line|
+    	@tasks << line.split("-")
+    end
   # render the views/index.erb template
 	erb :index
 end
